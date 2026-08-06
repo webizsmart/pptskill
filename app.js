@@ -101,7 +101,7 @@ const skillData = {
       "Source Note, Disclaimer 및 실행 가능한 데이터 파이프라인 캡슐화"
     ],
     tools: ["python-pptx", "matplotlib", "seaborn", "pandas", "LibreOffice", "PDF Preview Engine"],
-    previewImg: "presentation-skills-main/assets/apple-editorial-ink-native_contact-sheet.png"
+    previewImg: "assets/apple-editorial-ink-native_contact-sheet.png"
   },
   word: {
     title: "word-polished-doc-collab",
@@ -114,7 +114,7 @@ const skillData = {
       "계약서, 정책 설명서, 연구 보고서 부록, 이사회 제출용 부속 문서에 최적화"
     ],
     tools: ["python-docx", "OOXML Engine", "LibreOffice", "Pandas", "QA Validator"],
-    previewImg: "presentation-skills-main/assets/word-refined-industrial-service-transformation_spread.png"
+    previewImg: "assets/word-refined-industrial-service-transformation_spread.png"
   },
   video: {
     title: "web-demo-video-synthesis",
@@ -127,7 +127,7 @@ const skillData = {
       "숏폼(Xiaohongshu/TikTok 9:16) 및 롱폼(Bilibili/YouTube 16:9) 영역 자동 대응"
     ],
     tools: ["Playwright", "TTS Synthesis", "ffmpeg", "SRT Subtitle Engine", "Node.js"],
-    previewImg: "presentation-skills-main/demos/web-demo-video-synthesis-financial-agent/assets/preview_en.png"
+    previewImg: "assets/preview_en.png"
   },
   xhs: {
     title: "xhs-markdown-card-collab",
@@ -140,7 +140,7 @@ const skillData = {
       "가독성 저하 없는 자동 카드 분량 조절 (Pagination QA)"
     ],
     tools: ["Puppeteer / Playwright", "CSS Grid Layout", "Markdown Parser", "PNG Bundle Exporter"],
-    previewImg: "presentation-skills-main/demos/xhs-fictional-grid-storage-research-note/out/post_01.png"
+    previewImg: "assets/slides/xhs/post_01.png"
   }
 };
 
@@ -161,7 +161,7 @@ const galleryData = {
       "Conclusion & Final Hand-off Review Evidence"
     ];
     return {
-      src: `presentation-skills-main/demos/apple-editorial-ink-native/build/rendered/ppt_preview/slide_${num}.png`,
+      src: `assets/slides/editorial/slide_${num}.png`,
       slideNum: `Slide ${i + 1} / 10`,
       title: titles[i] || `Apple Editorial Slide ${i + 1}`
     };
@@ -183,7 +183,7 @@ const galleryData = {
       "Summary & Methodological Appendix"
     ];
     return {
-      src: `presentation-skills-main/demos/apple-financial-report-review/build/rendered/ppt_preview/slide_${num}.png`,
+      src: `assets/slides/financial/slide_${num}.png`,
       slideNum: `Slide ${i + 1} / 11`,
       title: titles[i] || `Financial Report Slide ${i + 1}`
     };
@@ -198,7 +198,7 @@ const galleryData = {
       "XHS Card 4: Investment Outlook & Summary Notes"
     ];
     return {
-      src: `presentation-skills-main/demos/xhs-fictional-grid-storage-research-note/out/post_${num}.png`,
+      src: `assets/slides/xhs/post_${num}.png`,
       slideNum: `Card ${i + 1} / 4`,
       title: titles[i]
     };
@@ -206,7 +206,7 @@ const galleryData = {
 
   "word-spread": [
     {
-      src: "presentation-skills-main/assets/word-refined-industrial-service-transformation_spread.png",
+      src: "assets/word-refined-industrial-service-transformation_spread.png",
       slideNum: "DOCX Spread View",
       title: "Refined Word Consulting Report Two-Page Spread & QC Layout"
     }
@@ -231,7 +231,7 @@ const pipelineSteps = {
     checks: ["Native Office 도형/표 사용", "수정 불가능한 이미지 지양", "폰트 및 줄간격 표준 할당"]
   },
   4: {
-    title: "4단계: Preview Render & Export (렌더링 렌더링 변환)",
+    title: "4단계: Preview Render & Export (렌더링 변환)",
     desc: "PowerPoint 또는 LibreOffice 헤드리스 모드를 호출하여 실제 PDF 및 슬라이드 이미지로 렌더링을 캡처합니다.",
     checks: ["LibreOffice PDF 변환", "슬라이드 렌더링 캡처", "페이지별 썸네일 검증"]
   },
