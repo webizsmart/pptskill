@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentation Skills - AI Presentation Workflow Dashboard</title>
+  <meta name="description" content="AI Agent presentation skills for real office delivery - Editable PowerPoint, Formal Word, Web Demo Video, and Xiaohongshu Cards with Multi-layer QC.">
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo-group">
+        <img src="presentation-skills-main/assets/presentation-skills-logo.svg" alt="Presentation Skills Logo" class="logo-img">
+        <span class="logo-text">presentation-skills</span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#gallery" class="nav-link" id="nav-gallery">Slide Gallery</a></li>
+        <li><a href="#pipeline" class="nav-link" id="nav-pipeline">QC Pipeline</a></li>
+        <li><a href="#prompt" class="nav-link" id="nav-prompt">Prompt Builder</a></li>
+        <li><a href="#catalog" class="nav-link" id="nav-catalog">Demos</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Select -->
+        <select class="lang-select" id="langSelect" aria-label="Language Selector">
+          <option value="kr">🇰🇷 한국어</option>
+          <option value="en">🇺🇸 English</option>
+          <option value="cn">🇨🇳 中文</option>
+        </select>
+
+        <!-- Theme Toggle -->
+        <button class="btn-icon" id="themeToggleBtn" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- GitHub Button -->
+        <a href="https://github.com/Sven-LI-sankyuu/presentation-skills" target="_blank" class="btn-primary">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="badge-bar">
+        <span class="badge badge-blue"><i class="fa-solid fa-layer-group"></i> 4 Packaged Skills</span>
+        <span class="badge badge-purple"><i class="fa-solid fa-file-powerpoint"></i> Editable Office Output</span>
+        <span class="badge badge-emerald"><i class="fa-solid fa-shield-halved"></i> 3-Layer QC Rules</span>
+        <span class="badge badge-amber"><i class="fa-solid fa-ban"></i> 0 HTML Screenshots</span>
+      </div>
+
+      <h1 class="hero-title" id="heroTitle">
+        실무 문서 품질을 구현하는<br><span>AI 프레젠테이션 스킬 대시보드</span>
+      </h1>
+
+      <p class="hero-subtitle" id="heroSubtitle">
+        Codex CLI 기반의 검증된 프레젠테이션 워크플로우 컬렉션. 편집 가능한 PPT 슬라이드 deck, 정식 보고서 형식의 Word 문서, 자동 자막/음성 합성 웹 데모 비디오, 고품질 카드뉴스를 3단계 QC 가이드라인으로 완벽하게 제작합니다.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#skills" class="btn-primary">
+          <i class="fa-solid fa-compass"></i>
+          <span id="btnExploreSkills">스킬 살펴보기</span>
+        </a>
+        <a href="#gallery" class="btn-secondary">
+          <i class="fa-solid fa-images"></i>
+          <span id="btnViewGallery">슬라이드 갤러리 감상</span>
+        </a>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="stats-grid">
+        <div class="stat-card glass-panel">
+          <div class="stat-number">4</div>
+          <div class="stat-label" id="statSkills">핵심 파이프라인 스킬</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">6</div>
+          <div class="stat-label" id="statDemos">검증된 데모 워크스페이스</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">100%</div>
+          <div class="stat-label" id="statEditable">PowerPoint / Word 수정 가능성</div>
+        </div>
+        <div class="stat-card glass-panel">
+          <div class="stat-number">3-Layer</div>
+          <div class="stat-label" id="statQc">자동 렌더링 & QC 검증</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Suite Section -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="skillTag">Core Capabilities</span>
+        <h2 class="section-title" id="skillTitle">4가지 핵심 프레젠테이션 스킬</h2>
+        <p class="section-desc" id="skillDesc">실무 요구사항에 맞춘 맞춤형 워크플로우 스킬을 클릭하여 상세 사양과 렌더링 결과를 확인하세요.</p>
+      </div>
+
+      <!-- Tabs Navigation -->
+      <div class="skill-tabs" id="skillTabs">
+        <button class="skill-tab active" data-skill="ppt">
+          <i class="fa-solid fa-file-powerpoint"></i> PPT Polished Deck
+        </button>
+        <button class="skill-tab" data-skill="word">
+          <i class="fa-solid fa-file-word"></i> Word Polished Doc
+        </button>
+        <button class="skill-tab" data-skill="video">
+          <i class="fa-solid fa-video"></i> Web Demo Video
+        </button>
+        <button class="skill-tab" data-skill="xhs">
+          <i class="fa-solid fa-icons"></i> XHS Markdown Card
+        </button>
+      </div>
+
+      <!-- Active Skill Detail Panel -->
+      <div class="glass-panel skill-content-panel" id="skillDetailPanel">
+        <!-- Dynamic JS Injection -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide Deck & Media Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="galleryTag">Rendered Evidence</span>
+        <h2 class="section-title" id="galleryTitle">실제 산출물 슬라이드 갤러리</h2>
+        <p class="section-desc" id="galleryDesc">AI Agent가 직접 생성하고 LibreOffice / 브라우저로 렌더링 검증을 마친 고품질 산출물 갤러리입니다. 각 카드를 클릭하면 원본 크기로 감상할 수 있습니다.</p>
+      </div>
+
+      <!-- Gallery Filter Tabs -->
+      <div class="gallery-nav">
+        <button class="gallery-btn active" data-gallery="apple-editorial">
+          🎨 Apple Editorial Ink Deck (10 Slide)
+        </button>
+        <button class="gallery-btn" data-gallery="apple-financial">
+          📊 Apple Financial Report Deck (11 Slide)
+        </button>
+        <button class="gallery-btn" data-gallery="xhs-cards">
+          📱 Xiaohongshu Card Set (4 Post)
+        </button>
+        <button class="gallery-btn" data-gallery="word-spread">
+          📄 Word Formal Doc Spread
+        </button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Dynamic JS Injection -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Workflow Pipeline Section -->
+  <section class="pipeline-section" id="pipeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="pipelineTag">Process & Quality Control</span>
+        <h2 class="section-title" id="pipelineTitle">5단계 품질 관리 (QC) 파이프라인</h2>
+        <p class="section-desc" id="pipelineDesc">단순 코드 생성을 넘어 실무 오피스 표준에 맞춘 다층 검증 레이어를 거칩니다.</p>
+      </div>
+
+      <!-- Pipeline Steps -->
+      <div class="pipeline-flow" id="pipelineFlow">
+        <div class="pipeline-step glass-panel active" data-step="1">
+          <div class="step-number">1</div>
+          <div class="step-title">Intent & Brief</div>
+          <div class="step-subtitle">청중 및 매체 분석</div>
+        </div>
+        <div class="pipeline-step glass-panel" data-step="2">
+          <div class="step-number">2</div>
+          <div class="step-title">Storyline</div>
+          <div class="step-subtitle">페이지별 메시지 설계</div>
+        </div>
+        <div class="pipeline-step glass-panel" data-step="3">
+          <div class="step-number">3</div>
+          <div class="step-title">Native Build</div>
+          <div class="step-subtitle">python-pptx/docx 코드 실행</div>
+        </div>
+        <div class="pipeline-step glass-panel" data-step="4">
+          <div class="step-number">4</div>
+          <div class="step-title">Preview Export</div>
+          <div class="step-subtitle">LibreOffice/PDF 렌더링</div>
+        </div>
+        <div class="pipeline-step glass-panel" data-step="5">
+          <div class="step-number">5</div>
+          <div class="step-title">3-Layer QC</div>
+          <div class="step-subtitle">텍스트 이탈/폰트/정렬 검수</div>
+        </div>
+      </div>
+
+      <!-- Pipeline Step Detail Box -->
+      <div class="glass-panel pipeline-detail-panel" id="pipelineDetail">
+        <!-- Dynamic JS Injection -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Prompt Builder & 30-Sec Start -->
+  <section class="prompt-section" id="prompt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="promptTag">Quick Start</span>
+        <h2 class="section-title" id="promptTitle">30초 설치 및 맞춤 프롬프트 생성기</h2>
+        <p class="section-desc" id="promptDesc">Codex CLI 환경에 스킬을 설치하고 바로 사용할 수 있는 프롬프트 문구를 자동 생성하세요.</p>
+      </div>
+
+      <!-- Quick Install Box -->
+      <div class="code-box">
+        <button class="code-copy-btn" onclick="copyInstallCmd()">
+          <i class="fa-regular fa-copy"></i> <span id="copyText1">Copy Command</span>
+        </button>
+        <span style="color: #64748b;"># Codex 스킬 디렉토리에 presentation-skills 전체 패키지 설치</span><br>
+        <span style="color: #06b6d4;">mkdir</span> -p ~/.codex/skills<br>
+        <span style="color: #06b6d4;">unzip</span> presentation-skills-all-skills-*.zip -d ~/.codex/skills
+      </div>
+
+      <!-- Prompt Builder Form -->
+      <div class="prompt-builder-grid">
+        <div class="glass-panel" style="padding: 24px;">
+          <h3 style="font-size: 1.2rem; margin-bottom: 16px;" id="promptBuilderTitle"><i class="fa-solid fa-sliders"></i> 프롬프트 설정</h3>
+          
+          <div class="form-group">
+            <label class="form-label" id="labelSkill">적용할 스킬 선택</label>
+            <select class="form-select" id="promptSkillSelect">
+              <option value="ppt-polished-deck-collab">ppt-polished-deck-collab (PowerPoint Decks)</option>
+              <option value="word-polished-doc-collab">word-polished-doc-collab (Word Reports)</option>
+              <option value="web-demo-video-synthesis">web-demo-video-synthesis (Demo Video)</option>
+              <option value="xhs-markdown-card-collab">xhs-markdown-card-collab (XHS Cards)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" id="labelScenario">보고서/발표 시나리오</label>
+            <select class="form-select" id="promptScenarioSelect">
+              <option value="financial-review">재무 실적 분석 및 전략 보고서 (Financial Report)</option>
+              <option value="editorial-ink">잡지/에디토리얼 키노트 발표 (Keynote / Editorial)</option>
+              <option value="tech-architecture">기술 아키텍처 설명회 (Technical Architecture)</option>
+              <option value="consulting-doc">컨설팅 스타일 정식 Word 보고서 (Consulting DOCX)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Prompt Code Result -->
+        <div class="code-box" style="margin-top: 0;">
+          <button class="code-copy-btn" onclick="copyPromptCmd()">
+            <i class="fa-regular fa-copy"></i> <span id="copyText2">Copy Prompt</span>
+          </button>
+          <pre id="promptResultCode" style="font-family: inherit; font-size: inherit; white-space: pre-wrap; word-break: break-word;"></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filterable Demo Catalog Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" id="catalogTag">Repositories Demos</span>
+        <h2 class="section-title" id="catalogTitle">전체 데모 카탈로그</h2>
+        <p class="section-desc" id="catalogDesc">레포지토리에 포함된 6가지 재현 가능한 실무 예시 카탈로그입니다.</p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar-wrap">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" class="search-input" id="catalogSearchInput" placeholder="데모 제목, 사용 도구, 태그로 검색...">
+      </div>
+
+      <!-- Catalog Cards Grid -->
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Dynamic JS Injection -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-backdrop" id="lightboxModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <div class="modal-img-container">
+        <button class="modal-nav-btn modal-prev" id="modalPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+        <img src="" alt="Slide Preview" class="modal-img" id="modalImg">
+        <button class="modal-nav-btn modal-next" id="modalNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://github.com/Sven-LI-sankyuu/presentation-skills" target="_blank">GitHub Repository</a>
+        <a href="https://github.com/Sven-LI-sankyuu/presentation-skills/releases/latest" target="_blank">Latest Skill Releases</a>
+        <a href="README.zh.md" target="_blank">Chinese Documentation</a>
+      </div>
+      <p>&copy; 2026 presentation-skills dashboard. Created for Sven-LI-sankyuu/presentation-skills repository exploration.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
